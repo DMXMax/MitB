@@ -1,8 +1,6 @@
-# MitB
+# Monster In the Box (MitB)
 
-Monster in the box. uses the generic pifacedigitalio web server with some tweaks
+Monster in the box.  Was inspired by the generic pifacedigitialio server, but has been rewritten to take advantage of python built-in threading. Also, the web page refreshes itself if the box is busy. 
 
-So I use python3, which means installing the default pifacedigitialio and then having to update the default the /pifacecommon/spi.py file to update the transfer speed. (its correct in the pifacecommon repo I have)
-
-then use apt install python3-pygame. Its the easiest way to install the pygame module.
+The MitB has three different shows, which are selected by the user. 
 
