@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from queue import Queue
 import threading
 import time
@@ -13,15 +13,20 @@ def do_work(routine_id):
     global lock
     lock.acquire()
     ROUTINES[str(routine_id)]()
-    time.sleep(5)
     print("working" + str(routine_id))
     lock.release()
 
 @app.route('/')
+@app.route('/box')
 def main():
-    return "Hello World"
+    if lock.locked():
+        msg="Busy"
+    else:
+        msg="Ready"
 
-@app.route('/routine/<int:routine_id>')
+    return render_template('box.htm', Message=msg)
+
+@app.route('/box/routine/<int:routine_id>')
 def run_routine(routine_id):
     global lock
     if lock.locked():
@@ -31,5 +36,5 @@ def run_routine(routine_id):
         busy = True
         t = threading.Thread(target=do_work, args=(routine_id,))
         t.start()
-    return msg
+    return render_template('box.htm', Message=msg)
 
