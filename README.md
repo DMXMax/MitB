@@ -4,7 +4,9 @@ Monster in the box.  Was inspired by the generic pifacedigitialio server, but ha
 
 The MitB has three different shows, which are selected by the user. 
 
-## Note
+## Additional Notes
+
+### installing pygame and pifacedigitalio
 
 Rasbian seems to have its own install of pygame called python3-pygame. 
 `
@@ -15,7 +17,7 @@ Pifacedigitalio is installed through pip3
 
 `pip3 install pifacecommon pifacedigitalio`
 
-## Running the Server
+### Running the Server
 
 `env FLASK_APP=MitBServer.py --host 0.0.0.0 `
 
