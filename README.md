@@ -9,9 +9,8 @@ The MitB has three different shows, which are selected by the user.
 ### Installing pygame and pifacedigitalio
 
 Rasbian seems to have its own install of pygame called python3-pygame. 
-`
-sudo apt install python3-pygame
-`
+
+`sudo apt install python3-pygame`
 
 Pifacedigitalio is installed through pip3
 
