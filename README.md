@@ -20,4 +20,3 @@ Pifacedigitalio is installed through pip3
 
 `env FLASK_APP=MitBServer.py --host 0.0.0.0 `
 
-
