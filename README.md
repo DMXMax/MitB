@@ -16,6 +16,18 @@ Pifacedigitalio is installed through pip3
 
 `pip3 install pifacecommon pifacedigitalio`
 
+
+### fixing "cannot find device error"
+Within spi.py (at my system it was at /usr/local/lib/python3.5/dist-packages/pifacecommon/spi.py) add a line speed_hz=ctypes.c_uint32(100000) to the transfer struct so that it looks as following
+
+ # create the spi transfer struct
+        transfer = spi_ioc_transfer(
+            tx_buf=ctypes.addressof(wbuffer),
+            rx_buf=ctypes.addressof(rbuffer),
+            len=ctypes.sizeof(wbuffer),
+            speed_hz=ctypes.c_uint32(100000) 
+        )
+
 ### Running the Server
 
 `env FLASK_APP=MitBServer.py --host 0.0.0.0 `
