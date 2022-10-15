@@ -31,6 +31,7 @@ Within spi.py (at my system it was at /usr/local/lib/python3.5/dist-packages/pif
 ### Running the Server
 
 `cd MitB`
+
 `FLASK_APP=MitBServer.py nohup flask run --host=0.0.0.0 &`
 
 This will run on port 5000 (default)
