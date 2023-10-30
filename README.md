@@ -17,7 +17,7 @@ Pifacedigitalio is installed through pip3
 `pip3 install pifacecommon pifacedigitalio`
 
 
-### fixing "cannot find device error"
+### fixing "cannot find device error" (Issue deprecated in 2023)
 Within spi.py (at my system it was at /usr/local/lib/python3.5/dist-packages/pifacecommon/spi.py) add a line speed_hz=ctypes.c_uint32(100000) to the transfer struct so that it looks as following
 
  # create the spi transfer struct
@@ -34,4 +34,12 @@ Within spi.py (at my system it was at /usr/local/lib/python3.5/dist-packages/pif
 `FLASK_APP=MitBServer.py nohup flask run --host=0.0.0.0 &`
 
 This will run on port 5000 (default)
+
+### Additional libraries (running in a venv)
+Python wants to run non-universal libs in a venv. But to get libraries and such you might need to still install pygame as above.
+If you run in a venv, you may need to add libraries:
+
+libsdl2-mixer-2.0-0 libsdl2-image-2.0-0 libsdl2-2.0-0
+
+these can be retrieved via apt-get
 
