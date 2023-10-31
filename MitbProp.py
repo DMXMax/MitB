@@ -5,7 +5,7 @@ import time as t
 piface = pio.PiFaceDigital()
 
 pygame.mixer.init()
-sound = pygame.mixer.Sound('spider3.flac')
+sound = pygame.mixer.Sound('spider3.wav')
 sound.set_volume(.035)
 
 def lid_up(delay):
