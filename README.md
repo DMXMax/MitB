@@ -35,6 +35,8 @@ Within spi.py (at my system it was at /usr/local/lib/python3.5/dist-packages/pif
 
 This will run on port 5000 (default)
 
+Note: start.cmd contains this command.
+
 ### Additional libraries (running in a venv)
 Python wants to run non-universal libs in a venv. But to get libraries and such you might need to still install pygame as above.
 If you run in a venv, you may need to add libraries:
@@ -42,4 +44,8 @@ If you run in a venv, you may need to add libraries:
 libsdl2-mixer-2.0-0 libsdl2-image-2.0-0 libsdl2-2.0-0
 
 these can be retrieved via apt-get
+
+### Network connectivity
+edit /etc/wpa_supplicant/wpa_supplicant.conf to provide the correct network settings. 
+
 
